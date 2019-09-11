@@ -7,6 +7,7 @@ searchButton.addEventListener('click', function () {
     let city = document.getElementById('searchInput').value;
     const result = getWeatherData(city);
     result.then(data => displayWeatherData(data));
+    result.then(data => getWeatherGif(data));
 });
 
 //get city weather data from api
@@ -16,6 +17,17 @@ async function getWeatherData(city) {
     //console.log(weatherData.weather[0].description);
     let data = weatherData.weather[0].description;
     return data;
+}
+
+//get gif to match weather data
+async function getWeatherGif(weatherDescription) {
+    const img = document.querySelector('img');
+    let giphyAPIKey = 'y1iU3pDPR9daxVTIEt7YyIyGFYkNFhBR';
+    let gifSearch = weatherDescription;
+    let response = await fetch('https://api.giphy.com/v1/gifs/translate?api_key=' + giphyAPIKey + '&s=' + gifSearch, { mode: 'cors' })
+    let gifData = await response.json()
+
+    img.src = gifData.data.images.original.url;
 }
 
 function displayWeatherData(weatherStatus) {
