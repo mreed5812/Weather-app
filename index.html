@@ -3,15 +3,20 @@
 
 <head>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+
 </head>
 
 <body>
-  <h1>Weather Forecast</h1>
-  <div id="searchBox">
+  <div id="weatherHeader">
+    <h1>Weather Forecast</h1>
+  </div>
+
+  <div class="weatherSearch">
     <input id='searchInput' type="text" placeholder="Search.." />
     <button id='searchButton'>Get Weather</button>
   </div>
-  <div>
+  <div class="displayContainer">
     <h2 id="weatherDisplay"></h2>
     <img src="">
   </div>
