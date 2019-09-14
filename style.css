@@ -1,3 +1,12 @@
+body {
+    background-color: cyan;
+}
+
+#weatherHeader{
+    color: white;
+    text-shadow:-1px -1px 0 rgb(68, 67, 67), 1px -1px 0 rgb(68, 67, 67), -1px 1px 0 rgb(68, 68, 68), 1px 1px 0 #000;
+}
+
 #weatherHeader {
      text-align: center;
      margin-top: 2%;
@@ -11,4 +20,6 @@
 
 .displayContainer{
     text-align: center;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
